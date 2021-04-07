@@ -1,5 +1,10 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$font-family-title: "shrikhand", serif;
+$color-white: #ffffff;
+$font-family-title: "shrikhand", cursive;
 $font-family-base:  "roboto", sans-serif;
+$breakpoints:(
+    tablets: 768px,
+    desktops: 1240px
+);

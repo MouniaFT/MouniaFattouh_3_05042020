@@ -2,9 +2,11 @@
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
-@import "./base/fonts";
-@import "./composants";
+@import "./utils/extensions";
+@import "./base/typography";
+@import "./composants/btn";
+@import "./composants/card";
 @import "./utils/variables";
 @import "./layout/header";
-@import "./Layout/footer";
-@import "./pages";
+@import "./layout/footer";
+@import "./pages/home";
