@@ -10,18 +10,28 @@
     }
 
     &__links{
-        & li{
+        li{
             margin-bottom: 12px;
     
             a{
                 color: $color-white;
+                transition: color 0.2s;
+
+                &:hover{
+                    color: darken($color-white, 20%);
+                }
             }
 
-            i {
+            i{
                 margin-right: 10px;
                 font-size: 14px;
                 width: 13px;
-            }    
+
+                &.fa-hands-helping{
+                    font-size: 11px;
+                }
+            }
+
         }
     }
 }

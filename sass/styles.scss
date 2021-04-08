@@ -3,10 +3,11 @@
 @import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/extensions";
-@import "./base/typography";
+@import "./base/global";
 @import "./composants/btn";
 @import "./composants/card";
 @import "./utils/variables";
 @import "./layout/header";
 @import "./layout/footer";
 @import "./pages/home";
+@import "./pages/restaurant";

@@ -1,10 +1,16 @@
+// color
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-white: #ffffff;
+$color-black: #000000;
+
+// typo
 $font-family-title: "shrikhand", cursive;
 $font-family-base:  "roboto", sans-serif;
+
+// breakpoints
 $breakpoints:(
     tablets: 768px,
-    desktops: 1240px
+    desktops: 1280px
 );
