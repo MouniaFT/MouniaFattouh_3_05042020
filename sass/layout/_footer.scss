@@ -34,4 +34,19 @@
 
         }
     }
+
+    @include tablets{
+        padding: 40px 0 40px 4px;
+        text-align: center;
+
+        &__links{
+            display: flex;
+            justify-content: center;
+            
+            li{
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+        }
+    }
 }

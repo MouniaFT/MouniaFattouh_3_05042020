@@ -13,11 +13,11 @@
         }
 
         &.as--restaurant3{
-            background-image: url("../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+            background-image: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
         }
 
         &.as--restaurant4{
-            background-image: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+            background-image: url("../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
         }
     }
 
@@ -34,6 +34,7 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 30px;
+            padding: 0 10px;
     
             &__title{
                 font-family: $font-family-title;
@@ -44,6 +45,18 @@
                 font-size: 22px;
                 cursor: pointer;
                 margin: 0 12px 0 20px;
+                
+                & i{
+                    transition: all 0.3s;
+
+                    &:hover{
+                        color: $color-primary;
+                        font-weight: 900;
+                        background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
             }
     
         }
@@ -53,6 +66,7 @@
             &__title{
                 text-transform: uppercase;
                 margin-bottom: 15px;
+                padding-left: 10px;
 
                 &::after{
                     content: '';
@@ -68,7 +82,39 @@
                 margin-bottom: 14px;
             }
         }
+
+        .btn{
+            max-width: 184px;
+            margin: 42px auto 0;
+            display: block;
+        }
     }
-    
-    
+
+    @include tablets{
+        &__image{
+            height: 420px;
+        }
+
+        &__content{
+            margin-top: -35px;
+            padding: 38px 30px 55px;
+        }
+
+        .restaurant__menu{
+            max-width: 950px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    @include desktops{
+        &__image{
+            height: 520px;
+        }
+
+        &__content{
+            margin-top: -35px;
+            padding: 38px 50px 55px;
+        }
+    }
 }

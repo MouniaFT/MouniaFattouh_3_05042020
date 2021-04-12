@@ -26,6 +26,7 @@
         i{
             font-size: 22px;
             cursor: pointer;
+            transition: all 0.3s;
 
             &:hover{
                 color: $color-primary;
@@ -51,7 +52,7 @@
 
 .card-dish{
     background-color: $color-white;
-    padding: 10px 18px 10px 12px;
+    padding: 14px 18px 14px 12px;
     border-radius: 15px;
     display: flex;
     justify-content: space-between;
