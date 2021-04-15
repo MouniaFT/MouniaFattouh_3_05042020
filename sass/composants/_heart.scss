@@ -1,0 +1,26 @@
+/* icon coeur + animation */
+
+.heart{
+    position: relative;
+
+    &:hover > .heart--filled{
+        opacity: 1;
+        transition: opacity 2s;
+    }
+
+    .heart--empty{
+        font-size: 22px;
+    }
+
+    .heart--filled{
+        font-size: 22px;
+        cursor: pointer;
+        background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;  
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
+}

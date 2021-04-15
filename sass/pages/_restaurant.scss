@@ -21,8 +21,6 @@
         }
     }
 
-    
-
     &__content{
         background-color: #f6f6f6;
         padding: 38px 12px 55px;
@@ -40,29 +38,16 @@
                 font-family: $font-family-title;
                 font-size: 28px;
             }
-    
-            &__icon{
-                font-size: 22px;
-                cursor: pointer;
-                margin: 0 12px 0 20px;
-                
-                & i{
-                    transition: all 0.3s;
 
-                    &:hover{
-                        color: $color-primary;
-                        font-weight: 900;
-                        background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    }
-                }
+            .heart{
+                margin: 0 12px 0 20px;
             }
     
         }
 
         .restaurant__menu{
             margin-top: 36px;
+    
             &__title{
                 text-transform: uppercase;
                 margin-bottom: 15px;
@@ -77,9 +62,67 @@
                     margin-top: 4px;
                 }
             }
-
+            
+            /* Animations des plats */
             .card-dish{
                 margin-bottom: 14px;
+                opacity: 0;
+                transform: translateY(10px);
+                animation: dish 1000ms  forwards;
+                position: relative;
+
+                &--1{
+                    animation-delay: 200ms;
+                }
+
+                &--2{
+                    animation-delay: 400ms;
+                }
+
+                &--3{
+                    animation-delay: 600ms;
+                }
+
+                &--4{
+                    animation-delay: 900ms;
+                }
+                
+                
+                &__check{
+                    width: 0;
+                    overflow: hidden;
+                    background-color: $color-tertiary;
+                    border-radius: 0 15px 15px 0;
+                    align-self: normal;
+                    margin: -14px -18px -14px -12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    
+                    i{
+                        color: $color-tertiary;
+                        background-color: $color-white;
+                        border-radius: 50%;
+                        padding: 5px;
+                    }
+
+                }
+
+                &:hover{
+                    .card-dish__check{
+                        animation: check-mobile 1s forwards;
+
+                        @include tablets{
+                            animation: check-desktop 1s forwards;
+                        }
+                    }
+
+                    i{
+                        animation: rotate-check-icon 0.5s forwards;
+                    }
+
+                } 
             }
         }
 
@@ -89,6 +132,7 @@
             display: block;
         }
     }
+
 
     @include tablets{
         &__image{
@@ -116,5 +160,44 @@
             margin-top: -35px;
             padding: 38px 50px 55px;
         }
+    }
+}
+
+
+/* Les keyframes */
+
+/* Animations pour les plats */
+@keyframes dish{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation au moment de choisir le plat */
+@keyframes check-mobile{
+    0%{
+        width: 0;
+    }
+
+    100%{
+        width: 50px;
+    }
+}
+
+@keyframes check-desktop{
+    0%{
+        width: 0;
+    }
+
+    100%{
+        width: 200px;
+    }
+}
+
+/* Animation rotate du l'icon check */
+@keyframes rotate-check-icon{
+    100%{
+        transform: rotate(360deg);
     }
 }
